@@ -8,10 +8,9 @@ const alumni = [
 
 //1
 function averageAge (array) {
-    let arrayOfAge = array.map(person => person.age);
-    return Math.floor(arrayOfAge.reduce((a,b) => a+b)/arrayOfAge.length);
+    return Math.floor(array.map(person => person.age).reduce((a,b) => a+b)/array.map(person => person.age).length);
 }
-// console.log(averageAge(alumni));
+console.log(averageAge(alumni));
 
 //2
 function bananaBread (array) {
