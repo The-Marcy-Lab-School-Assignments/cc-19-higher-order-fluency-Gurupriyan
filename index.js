@@ -8,7 +8,8 @@ const alumni = [
 
 //1
 function averageAge (array) {
-    return Math.floor(array.map(person => person.age).reduce((a,b) => a+b)/array.map(person => person.age).length);
+    return Math.floor(array.map(person => person.age).reduce((a,b) => a+b)/array.length);
+    //return array.reduce((a, b) => return {a + b.age}, 0)/;
 }
 console.log(averageAge(alumni));
 
